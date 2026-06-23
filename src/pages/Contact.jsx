@@ -6,6 +6,7 @@ function Contact() {
     name: "",
     phone: "",
     email: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -30,6 +31,7 @@ function Contact() {
       name: "",
       phone: "",
       email: "",
+      message: "",
     });
 
   } catch (error) {
@@ -77,6 +79,14 @@ function Contact() {
           name="email"
           placeholder="Enter Email"
           value={formData.email}
+          onChange={handleChange}
+          className="w-full p-3 mb-4 rounded bg-slate-800"
+        />
+
+        <textarea
+          name="message"
+          placeholder="Enter Message"
+          value={formData.message}
           onChange={handleChange}
           className="w-full p-3 mb-4 rounded bg-slate-800"
         />

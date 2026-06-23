@@ -50,6 +50,7 @@ function Admin() {
               <th className="p-3 border">Name</th>
               <th className="p-3 border">Phone</th>
               <th className="p-3 border">Email</th>
+              <th className="p-3 border">Message</th>
               <th className="p-3 border">Action</th>
             </tr>
           </thead>
@@ -69,6 +70,10 @@ function Admin() {
 
                 <td className="p-3 border">
                   {contact.email}
+                </td>
+
+                <td className="p-3 border">
+                  {contact.message}
                 </td>
 
                 <td className="p-3 border">

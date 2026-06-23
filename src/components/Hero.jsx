@@ -20,15 +20,15 @@ function Hero() {
           <div className="mt-4">
             <TypeAnimation
               sequence={[
-                "Full Stack Developer",
-                2000,
-                "React Developer",
-                2000,
-                "AI Builder",
-                2000,
-                "E-Commerce Developer",
-                2000,
-              ]}
+  "Full Stack Developer",
+  2000,
+  "Generative AI Developer",
+  2000,
+  "Data Scientist",
+  2000,
+  "AI & Analytics Engineer",
+  2000,
+]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
@@ -37,7 +37,7 @@ function Hero() {
           </div>
 
           <p className="mt-6 text-slate-400">
-            I build modern websites, ecommerce platforms and AI-powered
+            I build and analyze Generative AI, Machine Learning, and AI-powered
             applications.
           </p>
           <div className="flex gap-5 mt-6 text-3xl">

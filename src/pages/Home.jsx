@@ -5,7 +5,8 @@ import Services from "../components/Services";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -18,6 +19,24 @@ function Home() {
       <Skills />
       <Projects />
       <Footer />
+
+      <Link
+  to="/contact"
+  className="
+    fixed
+    bottom-24
+    right-5
+    bg-blue-500
+    p-4
+    rounded-full
+    text-3xl
+    shadow-lg
+    hover:scale-110
+    transition
+  "
+>
+  <FaEnvelope />
+</Link>
 
       <a
         href="https://wa.me/918318120145"
