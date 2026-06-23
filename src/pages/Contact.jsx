@@ -20,9 +20,9 @@ function Contact() {
 
   try {
     await axios.post(
-      "http://localhost:5000/api/contact",
-      formData
-    );
+  "https://anshu-portfolio-backend.onrender.com/api/contact",
+  formData
+);
 
     alert("Data Saved Successfully");
 
