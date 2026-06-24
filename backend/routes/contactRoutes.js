@@ -1,6 +1,8 @@
 import express from "express";
 import Contact from "../models/Contact.js";
 import { sendContactEmail } from "../sendEmail.js";
+import { sendTelegramMessage } from "../sendTelegram.js";
+
 
 const router = express.Router();
 
@@ -16,6 +18,12 @@ try {
   await sendContactEmail(req.body);
 } catch (err) {
   console.log("Email Failed:", err.message);
+}
+
+try {
+  await sendTelegramMessage(req.body);
+} catch (err) {
+  console.log("Telegram Error:", err.message);
 }
 
 res.status(201).json(savedContact);
