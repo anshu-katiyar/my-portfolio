@@ -1,5 +1,6 @@
 import express from "express";
 import Contact from "../models/Contact.js";
+import { sendContactEmail } from "../sendEmail.js";
 
 const router = express.Router();
 
@@ -10,6 +11,8 @@ router.post("/", async (req, res) => {
     const newContact = new Contact(req.body);
 
     const savedContact = await newContact.save();
+
+    await sendContactEmail(req.body);
 
     console.log("Saved:", savedContact);
 
