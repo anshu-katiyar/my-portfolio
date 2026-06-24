@@ -12,11 +12,13 @@ router.post("/", async (req, res) => {
 
     const savedContact = await newContact.save();
 
-    await sendContactEmail(req.body);
+try {
+  await sendContactEmail(req.body);
+} catch (err) {
+  console.log("Email Failed:", err.message);
+}
 
-    console.log("Saved:", savedContact);
-
-    res.status(201).json(savedContact);
+res.status(201).json(savedContact);
 
   } catch (error) {
 
